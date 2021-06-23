@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { DraggableContainer } from './components/DraggableContainer';
+import { Output } from './components/Output';
+import { ContextWrapper } from './core/AppContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextWrapper>
+
+      {/* <div className="flex flex-row item-center justify-center mx-auto">
+        
+      </div> */}
+      <div className="flex flex-row items-center justify-center h-screen mx-auto">
+
+        {/* <div className=" w-full"> */}
+        <DraggableContainer></DraggableContainer>
+        <Output></Output>
+        {/* </div> */}
+      </div>
+    </ContextWrapper>
+    // <Draggable></DraggableContainer>
   );
 }
 
